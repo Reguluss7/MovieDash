@@ -59,7 +59,9 @@ ROOT_URLCONF = 'netfex.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',  # Уберите 'src', так как BASE_DIR уже = src/
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

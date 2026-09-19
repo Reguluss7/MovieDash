@@ -8,4 +8,4 @@ def hello_view(request):
 
 def index(request):
 
-    return render(request, 'templates/index.html')
+    return render(request, 'index.html')
