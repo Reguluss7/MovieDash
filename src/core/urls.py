@@ -1,5 +1,5 @@
 from core.views import hello_view, index
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('', hello_view, name='hello'),
