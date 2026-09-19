@@ -1,5 +1,5 @@
 """
-URL configuration for netfx project.
+URL configuration for netfex project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.1/topics/http/urls/
@@ -16,13 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
-from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('user.urls')),
-    path('movie', include('movie.urls')),
-    path('subscriptions', include('subscriptions.urls')),
-    path('profile', include('profile.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include('core.urls'))
+]
